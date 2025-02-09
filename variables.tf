@@ -33,5 +33,3 @@ variable "docker_registry_password" {
   description = "The Docker registry password"
   type        = string
 }
-# variable "docker_registry_username" {}
-# variable "docker_registry_password" {}
