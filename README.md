@@ -1,6 +1,7 @@
 # ARCHITECTURE:
 ![alt text](Cloud_Architecture.jpg)
-#PREREQUISITES:
+
+## PREREQUISITES:
 ## Install Azure CLI:
 
 ```
