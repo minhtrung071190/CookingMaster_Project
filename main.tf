@@ -2,6 +2,7 @@
 
 provider "azurerm" {
   features {}
+  #  subscription_id = "922ef694-a56b-40f9-b615-36e3aedb343f"
 }
 
 resource "azurerm_resource_group" "rg" {
@@ -48,11 +49,11 @@ resource "azurerm_container_app" "app" {
       }
       env {
         name  = "DOCKER_REGISTRY_USERNAME"
-        value = var.docker_user
+        value = var.docker_registry_username
       }
       env {
         name  = "DOCKER_REGISTRY_PASSWORD"
-        value = var.docker_password
+        value = var.docker_registry_password
       }
     }
   }

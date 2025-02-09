@@ -24,12 +24,14 @@ variable "dns_name_label" {
   default = "cookingmaster-app"
 }
 
-variable "docker_user" {
+variable "docker_registry_username" {
   description = "The Docker registry username"
   type        = string
 }
 
-variable "docker_password" {
+variable "docker_registry_password" {
   description = "The Docker registry password"
   type        = string
 }
+# variable "docker_registry_username" {}
+# variable "docker_registry_password" {}
