@@ -16,7 +16,7 @@ ansible-galaxy collection install azure.azcollection:1.11.0
 ```
 
 ## Run Dynamic inventory for VMs
-### inventory file must end with azurerm.yml
+### inventory file must end with azure_rm.yml
 ```
-ansible-inventory -i vmazurerm.yml --graph
+ansible-inventory -i vmazure_rm.yml --graph
 ```
