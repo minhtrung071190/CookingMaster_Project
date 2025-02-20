@@ -7,7 +7,7 @@ docker network create app_network
 ## Running mysql
 
 ```
-docker run -d --name backend_db --network app_network -e MYSQL_ROOT_PASSWORD=pw  henry071190/backend_db
+docker run -d --name backend-db --network app_network -e MYSQL_ROOT_PASSWORD=pw  henry071190/backend_db
 ```
 
 ## Running backend
