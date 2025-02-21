@@ -13,7 +13,7 @@ resource "azurerm_resource_group" "rg" {
 data "terraform_remote_state" "network" {
   backend = "azurerm"
   config = {
-    resource_group_name  = "myRGStorage"
+    resource_group_name  = "CloudEx-Seneca-RG"
     storage_account_name = "cloudexsenecastorage"
     container_name       = "network"
     key                  = "network/statefile.tfstate"
@@ -66,6 +66,7 @@ os_profile {
 
 os_profile_linux_config {
   disable_password_authentication = false
+}
 }
 
 #Install Docker
