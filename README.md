@@ -19,12 +19,13 @@ az login
 export TF_VAR_DOCKER_REGISTRY_USER="docker username"
 export TF_VAR_DOCKER_REGISTRY_PASSWORD="docker password"
 export ARM_SUBSCRIPTION_ID="azure subscription ID"
+export TF_MYSQL_ROOT_PASSWORD="mysql password"
 ```
 
 ## Deploy terraform
 
 ```
-terraform apply -var="docker_registry_username=$TF_VAR_DOCKER_REGISTRY_USERNAME" -var="docker_registry_password=$TF_VAR_DOCKER_REGISTRY_PASSWORD" --auto-approve
+terraform apply --var-file="credentials.tfvars" --auto-approve
 
 ```
 
