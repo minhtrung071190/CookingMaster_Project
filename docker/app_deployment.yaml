@@ -109,7 +109,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: henry071190/frontend:5
+          image: henry071190/frontend
           ports:
             - containerPort: 3000
           env:
