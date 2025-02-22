@@ -18,7 +18,7 @@ docker run -d --name backend --network app_network -p 8888:8888 henry071190/back
 ## Running frontend
 
 ```
-docker run -d --name frontend --network app_network -p 3000:3000 henry071190/frontend:5
+docker run -d --name frontend --network app_network -p 3000:3000 -e REACT_APP_API_URL="http://backend:8888" henry071190/frontend
 ```
 
 # [BUILD] Build docker image
@@ -60,5 +60,5 @@ docker run -d --name backend --network app_network -p 8888:8888 -e DBHOST=$DBHOS
 ## Run the application, make sure it is visible in the browser
 
 ```
-docker run -d --name frontend --network app_network -p 3000:3000 -e DBHOST=$DBHOST -e DBPORT=$DBPORT -e  DBUSER=$DBUSER -e DBPWD=$DBPWD  henry071190/frontend:5
+docker run -d --name frontend --network app_network -p 3000:3000 -e DBHOST=$DBHOST -e DBPORT=$DBPORT -e  DBUSER=$DBUSER -e DBPWD=$DBPWD -e REACT_APP_API_URL="http://backend:8888"  henry071190/frontend
 ```
