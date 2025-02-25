@@ -1,0 +1,17 @@
+## Powershell
+
+```
+Set-Item -Path env:TF_VAR_DOCKER_REGISTRY_USERNAME -Value 'user'
+Set-Item -Path env:TF_VAR_DOCKER_REGISTRY_PASSWORD -Value 'pass'
+Set-Item -Path env:TF_VAR_MYSQL_ROOT_PASSWORD -Value 'pw'
+
+./deploy.ps1
+```
+
+## Bash
+
+```
+export TF_VAR_DOCKER_REGISTRY_USERNAME="user"
+export TF_VAR_DOCKER_REGISTRY_PASSWORD="pass"
+export TF_VAR_MYSQL_ROOT_PASSWORD="pw"
+```
