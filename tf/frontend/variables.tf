@@ -39,19 +39,19 @@ variable "frontend_image" {
   description = "Docker image for frontend"
 }
 
-variable "docker_registry_username" {
+variable "DOCKER_REGISTRY_USERNAME" {
   description = "The Docker registry username"
   type        = string
 }
 
-variable "docker_registry_password" {
+variable "DOCKER_REGISTRY_PASSWORD" {
   description = "The Docker registry password"
   type        = string
 }
 
-variable "mysql_root_password" {
-  type        = string
-  description = "The password for the MySQL root user"
-  sensitive   = true
-}
+# variable "mysql_root_password" {
+#   type        = string
+#   description = "The password for the MySQL root user"
+#   sensitive   = true
+# }
 

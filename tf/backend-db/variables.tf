@@ -39,12 +39,12 @@ variable "db_image" {
   description = "Docker image for backend db"
 }
 
-variable "docker_registry_username" {
+variable "DOCKER_REGISTRY_USERNAME" {
   description = "The Docker registry username"
   type        = string
 }
 
-variable "docker_registry_password" {
+variable "DOCKER_REGISTRY_PASSWORD" {
   description = "The Docker registry password"
   type        = string
 }

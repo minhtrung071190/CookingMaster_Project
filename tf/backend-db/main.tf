@@ -54,11 +54,11 @@ resource "azurerm_container_app" "backend_db" {
       }
       env {
         name  = "DOCKER_REGISTRY_USERNAME"
-        value = var.docker_registry_username
+        value = var.DOCKER_REGISTRY_USERNAME
       }
       env {
         name  = "DOCKER_REGISTRY_PASSWORD"
-        value = var.docker_registry_password
+        value = var.DOCKER_REGISTRY_PASSWORD
       }
       # Database credentials
       env {

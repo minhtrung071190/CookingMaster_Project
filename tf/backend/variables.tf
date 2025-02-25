@@ -44,17 +44,17 @@ variable "backend_image" {
 #   default = "cookingmaster-app"
 # }
 
-variable "docker_registry_username" {
+variable "DOCKER_REGISTRY_USERNAME" {
   description = "The Docker registry username"
   type        = string
 }
 
-variable "docker_registry_password" {
+variable "DOCKER_REGISTRY_PASSWORD" {
   description = "The Docker registry password"
   type        = string
 }
 
-variable "mysql_root_password" {
+variable "MYSQL_ROOT_PASSWORD" {
   type        = string
   description = "The password for the MySQL root user"
   sensitive   = true

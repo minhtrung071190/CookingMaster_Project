@@ -29,15 +29,15 @@ resource "azurerm_container_app" "backend" {
       }
       env {
         name  = "DOCKER_REGISTRY_USERNAME"
-        value = var.docker_registry_username
+        value = var.DOCKER_REGISTRY_USERNAME
       }
       env {
         name  = "DOCKER_REGISTRY_PASSWORD"
-        value = var.docker_registry_password
+        value = var.DOCKER_REGISTRY_PASSWORD
       }
       env {
         name  = "MYSQL_ROOT_PASSWORD"
-        value = var.mysql_root_password
+        value = var.MYSQL_ROOT_PASSWORD
       }
       env {
         name  = "DB_HOST"

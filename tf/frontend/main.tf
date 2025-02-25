@@ -1,3 +1,13 @@
+data "terraform_remote_state" "backend-db" {
+  backend = "azurerm"
+  config = {
+    resource_group_name  = "CloudEx-Seneca-RG"
+    storage_account_name = "cloudexsenecastorage"
+    container_name       = "backend-db"
+    key                  = "statefile.tfstate"
+  }
+}
+
 data "terraform_remote_state" "backend" {
   backend = "azurerm"
   config = {
@@ -11,7 +21,7 @@ data "terraform_remote_state" "backend" {
 #Create frontend
 resource "azurerm_container_app" "frontend" {
   name                         = "frontend"
-  container_app_environment_id = data.terraform_remote_state.backend.outputs.container_app_env_id
+  container_app_environment_id = data.terraform_remote_state.backend-db.outputs.container_app_env_id
   resource_group_name          = var.resource_group_name
   revision_mode                = "Single" # Change if needed
 
@@ -29,16 +39,16 @@ resource "azurerm_container_app" "frontend" {
       }
       env {
         name  = "DOCKER_REGISTRY_USERNAME"
-        value = var.docker_registry_username
+        value = var.DOCKER_REGISTRY_USERNAME
       }
       env {
         name  = "DOCKER_REGISTRY_PASSWORD"
-        value = var.docker_registry_password
+        value = var.DOCKER_REGISTRY_PASSWORD
       }
       #backend-url
       env {
         name  = "REACT_APP_API_URL"
-        value = data.terraform_remote_state.backend.outputs.backend_url
+        value = "http://${data.terraform_remote_state.backend.outputs.backend_url}"
       }
     }
   }
