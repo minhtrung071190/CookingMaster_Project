@@ -48,7 +48,7 @@ resource "azurerm_container_app" "frontend" {
       #backend-url
       env {
         name  = "REACT_APP_API_URL"
-        value = "http://${data.terraform_remote_state.backend.outputs.backend_url}"
+        value = "https://${data.terraform_remote_state.backend.outputs.backend_url}"
       }
     }
   }
