@@ -1,3 +1,5 @@
+![alt text](Front-Back-DB-Arc.jpg)
+
 ## config.tf && providers.tf
 
 1.Configure storageaccount in config.tf to your storageaccount
